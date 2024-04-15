@@ -38,7 +38,7 @@ class Quiz {
         }  
     }
 //PROBANDO//
-//PROBANDO 1
+//PROBANDO 3
     // 2. getQuestion()
     
     // 3. moveToNextQuestion()
