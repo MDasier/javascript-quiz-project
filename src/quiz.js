@@ -37,7 +37,6 @@ class Quiz {
             return false;
         }  
     }
-    //PROBANDO//2//
 
     // 2. getQuestion()
     
