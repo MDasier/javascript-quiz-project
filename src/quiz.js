@@ -40,6 +40,7 @@ class Quiz {
             return false;
         }  
     }
+<<<<<<< HEAD
 
     filterQuestionsByDifficulty(difficulty){
         let preguntasArr=[]
@@ -57,5 +58,12 @@ class Quiz {
         }            
        return preguntasArr
     }
+=======
+//PROBANDO//
+//PROBANDO 3
+    // 2. getQuestion()
+    
+    // 3. moveToNextQuestion()
+>>>>>>> 25c1272e0a80306cf4c3861bf396fb4fd116db80
 
 }
