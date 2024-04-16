@@ -38,28 +38,18 @@ class Quiz {
         }  
     }
     filterQuestionsByDifficulty(difficulty){
-        let preguntasArr=[]
-        if(typeof difficulty==="number" && (difficulty<4&&difficulty>0)){
-           let preguntasArr=this.questions.filter((cadaPregunta)=>{   
-            console.log(cadaPregunta.difficulty+" test: "+difficulty)         
-                if(cadaPregunta.difficulty>difficulty){
-                    return -1
-                }else if(cadaPregunta.difficulty<difficulty){
-                    return 1
-                }else{
-                    return 0
-                }
-            })
-        }            
-       return preguntasArr
+        let preguntas = this.questions;
+    let preguntasFiltradas = preguntas.filter((pregunta) => {
+      return pregunta.difficulty === difficulty;
+    })
+    return preguntasFiltradas
+      } 
+      averageDifficulty() {
+        let suma = this.questions.reduce((acc, pregunta) => {
+          return acc + pregunta.difficulty;
+        }, 0);
+        console.log(this.questions.length);
+        console.log(suma);
+        return suma / this.questions.length;
+      }
     }
-    // 2. getQuestion()
-    
-    // 3. moveToNextQuestion()
-
-    // 4. shuffleQuestions()
-
-    // 5. checkAnswer(answer)
-
-    // 6. hasEnded()
-}
