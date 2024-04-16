@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   /************  HTML ELEMENTS  ************/
-  // View divs
+  // View divs  
   const quizView = document.querySelector("#quizView");
   const endView = document.querySelector("#endView");
 
