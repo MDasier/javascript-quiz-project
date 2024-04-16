@@ -37,8 +37,22 @@ class Quiz {
             return false;
         }  
     }
-//PROBANDO//
-//PROBANDO 3
+    filterQuestionsByDifficulty(difficulty){
+        let preguntasArr=[]
+        if(typeof difficulty==="number" && (difficulty<4&&difficulty>0)){
+           let preguntasArr=this.questions.filter((cadaPregunta)=>{   
+            console.log(cadaPregunta.difficulty+" test: "+difficulty)         
+                if(cadaPregunta.difficulty>difficulty){
+                    return -1
+                }else if(cadaPregunta.difficulty<difficulty){
+                    return 1
+                }else{
+                    return 0
+                }
+            })
+        }            
+       return preguntasArr
+    }
     // 2. getQuestion()
     
     // 3. moveToNextQuestion()
