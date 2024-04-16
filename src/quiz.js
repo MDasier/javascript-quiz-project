@@ -38,11 +38,14 @@ class Quiz {
         }  
     }
     filterQuestionsByDifficulty(difficulty){
-        let preguntas = this.questions;
-    let preguntasFiltradas = preguntas.filter((pregunta) => {
+    let preguntasFiltradas = this.questions.filter((pregunta) => {
       return pregunta.difficulty === difficulty;
     })
-    return preguntasFiltradas
+
+	if((difficulty>0 && difficulty<4)){
+      this.questions = preguntasFiltradas
+    }
+    
       } 
       averageDifficulty() {
         let suma = this.questions.reduce((acc, pregunta) => {
