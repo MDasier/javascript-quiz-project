@@ -8,11 +8,11 @@ class Quiz {
         this.timeRemaining = timeRemaining;
         this.correctAnswers =0;
         this.currentQuestionIndex=0;
-        console.log(this.questions)
-        }
+        //console.log(this.questions)
+    }
     getQuestion(){
         return  this.questions[this.currentQuestionIndex];
-       }
+    }
     moveToNextQuestion(){
         this.currentQuestionIndex++;
     }
@@ -38,21 +38,21 @@ class Quiz {
         }  
     }
     filterQuestionsByDifficulty(difficulty){
-    let preguntasFiltradas = this.questions.filter((pregunta) => {
-      return pregunta.difficulty === difficulty;
-    })
+        let preguntasFiltradas = this.questions.filter((pregunta) => {
+        return pregunta.difficulty === difficulty;
+        })
 
-	if((difficulty>0 && difficulty<4)){
-      this.questions = preguntasFiltradas
-    }
+        if((difficulty>0 && difficulty<4)){
+            this.questions = preguntasFiltradas
+        }
     
-      } 
-      averageDifficulty() {
+    } 
+    averageDifficulty(){
         let suma = this.questions.reduce((acc, pregunta) => {
           return acc + pregunta.difficulty;
         }, 0);
         console.log(this.questions.length);
         console.log(suma);
         return suma / this.questions.length;
-      }
     }
+}
