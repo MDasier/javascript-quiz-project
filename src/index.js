@@ -161,9 +161,11 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedNodeList.forEach((circulo)=>{
       if (circulo.checked===true){
         circuloSeleccionado = circulo
+        quiz.checkAnswer(circuloSeleccionado.value)
       }
     })
-    quiz.checkAnswer(circuloSeleccionado.value)/*//comparar respuesta
+    //quiz.checkAnswer(circuloSeleccionado.value)
+    /*
     if (circuloSeleccionado.value === quiz.questions[quiz.currentQuestionIndex].answer){
       quiz.correctAnswers++
     } */
@@ -188,13 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Move to the next question by calling the quiz method `moveToNextQuestion()`.
       // Show the next question by calling the function `showQuestion()`.
   }  
-      /*const buttonAnswer = document.querySelector(".button-primary")
-      buttonAnswer.addEventListener("click", () =>{
-        //console.log("click")
-        
-      })*/
-
-
 
 
   function showResults() {
